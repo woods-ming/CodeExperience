@@ -5,85 +5,140 @@
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+/* 布局调整 */
+
+#breadcrumb {
+    margin-top: 10px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+#subMenu {
+    margin-top: 3em;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+#content {
+    margin: 1em 0;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0;
 }
 
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+.bs-docs-footer {
+    margin: 0;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+/* 代码美化组件 */
+pre.prettyprint {
+    overflow: auto;
+    font-family: Consolas;
+    /*margin:0;*/
 }
 
-.marketing p + h4 {
-  margin-top: 28px;
+.modal {
+    padding: 20px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.modal-dialog {
+    width: 80%;
+    height: 80%;
+    /*left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;*/
 }
+
+/* 普通列表 */
+ul {
+    list-style-type: none;
+}
+
+/* 提示区域 */
+.alert {
+    margin: 1em 0;
+}
+
+/* 遮罩层 */
+.backdrop {
+    z-index: 1040;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.1;
+}
+
+/* 加载中... */
+.loading {
+    background-color: #FFF;
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: .5em 50%;
+    padding: .4em 1em .4em 2em;
+}
+
+/* 等待加载 */
+.backdrop + .loading {
+    z-index: 1050;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: auto;
+    border: 2px solid #E3E3E3;
+}
+
+/* 快速面板 */
+#rapidPanel {
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    position: fixed;
+}
+
+/* 黑板 */
+.blackBoard {
+    padding: .5em 1em;
+    border: 6px solid #C5A568;
+    background-color: #20503F;
+    color: white;
+    font-family: 楷体;
+    font-size: 1.2em;
+}
+
+    .blackBoard h3 {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .blackBoard dl {
+        margin-bottom: 2em;
+    }
+
+        .blackBoard dl dl {
+            margin-left: 2em;
+        }
+
+    .blackBoard dd {
+        margin: .8em 0;
+    }
+
+    .blackBoard li {
+        margin: .4em;
+    }
+
+    .blackBoard .label, .blackBoard .badge {
+        padding: 4px 5px;
+        letter-spacing: 2px;
+    }
+
+    .blackBoard h3, .blackBoard .label, .blackBoard .badge {
+        font-family: 'Microsoft YaHei';
+    }
+
+/* 源代码面板 */
+.bs-example:after {
+    content: "源代码"!important;
+}
+

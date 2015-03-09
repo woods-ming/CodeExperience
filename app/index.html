@@ -1,97 +1,136 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>CodeExperience</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>CodeExperience</title>
+  <meta name="author" content="woods240" />
+  <meta name="keywords" content="编程经验" />
+  <meta name="description" content="梳理知识结构、分享编程知识，思路引导为主、代码示例为辅">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/google-code-prettify/bin/prettify.min.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/patch.css">
+  <link rel="stylesheet" href="styles/docs.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
 
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">CodeExperience</h3>
-      </div>
+      <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+          <span class="skiplink-text">Skip to main content</span>
+        </div>
+      </a>
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
-      </div>
+      <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">Let's Code</a>
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse">
+            <ul id="mainMenu" class="nav navbar-nav">
+              <!--主导航-->
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-
+      <div class="bs-docs-header hidden">
+        <div id="summary" class="container">
+          <!--摘要-->
         </div>
       </div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      <div class="container bs-docs-container">
+        <div class="row">
+          <div class="col-md-9">
+            <ul id="breadcrumb" class="breadcrumb">
+              面包屑
+            </ul>
+            <div id="content">
+              <!--内容-->
+            </div>
+            <div class="bdsharebuttonbox">
+              <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+              <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+              <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+              <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+              <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+              <ul id="subMenu" class="nav bs-docs-sidenav">
+                <!--子菜单-->
+              </ul>
+              <a class="back-to-top" href="#top">返回顶部</a>  
+            </nav>
+          </div>
+        </div>
       </div>
 
-    </div>
+      <footer class="bs-docs-footer">
+        <div class="container">
+          <p>本网站由 <a href="http://lightgrid.sinaapp.com/" target="_blank">woods240</a> 在业余时间归纳总结。所有内容基于个人理解，仅用于参考，不保证正确性。</p>
+          <p>版权所有，保留一切权利。</p>
+        </div>
+      </footer>
 
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+      <!-- build:js(.) scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/json2html/json2html.js"></script>
+      <script src="bower_components/google-code-prettify/bin/prettify.min.js"></script>
+      <!-- endbower -->
+      <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+      </script>
 
-        <!-- build:js(.) scripts/plugins.js -->
-        <script src="bower_components/bootstrap/js/affix.js"></script>
-        <script src="bower_components/bootstrap/js/alert.js"></script>
-        <script src="bower_components/bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/modal.js"></script>
-        <script src="bower_components/bootstrap/js/transition.js"></script>
-        <script src="bower_components/bootstrap/js/button.js"></script>
-        <script src="bower_components/bootstrap/js/popover.js"></script>
-        <script src="bower_components/bootstrap/js/carousel.js"></script>
-        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/collapse.js"></script>
-        <script src="bower_components/bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
+      <!-- build:js(.) scripts/plugins.js -->
+      <script src="bower_components/bootstrap/js/affix.js"></script>
+      <script src="bower_components/bootstrap/js/alert.js"></script>
+      <script src="bower_components/bootstrap/js/dropdown.js"></script>
+      <script src="bower_components/bootstrap/js/tooltip.js"></script>
+      <script src="bower_components/bootstrap/js/modal.js"></script>
+      <script src="bower_components/bootstrap/js/transition.js"></script>
+      <script src="bower_components/bootstrap/js/button.js"></script>
+      <script src="bower_components/bootstrap/js/popover.js"></script>
+      <script src="bower_components/bootstrap/js/carousel.js"></script>
+      <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+      <script src="bower_components/bootstrap/js/collapse.js"></script>
+      <script src="bower_components/bootstrap/js/tab.js"></script>
+      <!-- endbuild -->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+      <!-- build:js({app,.tmp}) scripts/main.js -->
+      <script src="scripts/waitingPrompt.js"></script>
+      <script src="scripts/prettyCode.js"></script>
+      <script src="scripts/location.js"></script>
+      <!-- endbuild -->
 </body>
 </html>
