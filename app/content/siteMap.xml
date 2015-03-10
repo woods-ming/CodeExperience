@@ -176,7 +176,7 @@
         </category>
         <category text="管理层面">
             <item name="#continuousIntegration" url="content/Expand/continuousIntegration.html" keywords="持续集成,cruise.net">《持续集成》</item>
-            <item name="#projectPlan" url="content/Expand/projectPlan.json" keywords="项目计划、进度与控制">《项目计划、进度与控制》</item>
+            <item name="#ProjectPlan" url="content/book/ProjectPlan.json" keywords="项目计划、进度与控制">《项目计划、进度与控制》</item>
         </category>
     </nav>
     <nav text="推荐工具">
