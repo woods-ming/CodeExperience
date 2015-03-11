@@ -1,49 +1,48 @@
 {
-    "blackBoard":{
-        "title":"《项目计划、进度与控制》",
-        "sub_title":"项目管理",
-        "chapters":[
+    "blackBoard": {
+        "title": "《项目计划、进度与控制》",
+        "sub_title": "项目管理",
+        "chapters": [
             {
-                "chapter_name":"一、项目管理总论",
-                "sections":[
+                "chapter_name": "一、项目管理总论",
+                "sections": [
                     {
-                        "section_name":"1.概述",
-                        "blocks":[
+                        "section_name": "1.概述",
+                        "blocks": [
                             {
-                                "key":"什么是项目？",
-                                "description":"就是定好时间，解决问题！（多任务复合体）"
+                                "key": "什么是项目？",
+                                "description": "就是定好时间，解决问题！（多任务复合体）"
                             },
                             {
-                                "key":"什么是项目管理（狭义）？",
-                                "description":"明确目标，制定计划，控制实施过程（组织团队共同完成整个过程）"
+                                "key": "什么是项目管理（狭义）？",
+                                "description": "明确目标，制定计划，控制实施过程（组织团队共同完成整个过程）"
                             },
                             {
-                                "key":"什么是项目管理（广义）？",
-                                "description":"用规范的思考方式去完成一件工作"
+                                "key": "什么是项目管理（广义）？",
+                                "description": "用规范的思考方式去完成一件工作"
                             },
                             {
-                                "key":"什么是项目目标？",
-                                "description":"交付既定产品，符合利益干系人的期望"
+                                "key": "什么是项目目标？",
+                                "description": "交付既定产品，符合利益干系人的期望"
                             },
                             {
-                                "key":"什么是KISS原则？",
-                                "description":"Keep It Simple Stupid 只做必要的事情"
+                                "key": "什么是KISS原则？",
+                                "description": "Keep It Simple Stupid 只做必要的事情"
                             }
                         ]
                     }
                 ]
             }
-            
         ]
     },
-    "alert":{
-        "title":"作者箴言",
-        "pargraphs":[
+    "alert": {
+        "title": "作者箴言",
+        "pargraphs": [
             {
-                "description":"异想天开的人总是做同一件事，却期待不同的结果"
+                "description": "异想天开的人总是做同一件事，却期待不同的结果"
             },
             {
-                "description":"项目管理的核心是思考方式，它适合于任何项目"
+                "description": "项目管理的核心是思考方式，它适合于任何项目"
             }
         ]
     }

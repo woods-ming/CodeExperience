@@ -1,0 +1,161 @@
+{
+    "blackBoard": {
+        "title": "《 通用编程规范 》",
+        "sub_title": "任何编程语言都应遵守的准则",
+        "sections": [
+            {
+                "section_name": "1.编程规范的目的",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "（必须）减少bug"
+                    },
+                    {
+                        "key": "",
+                        "description": "（应该）统一编程风格"
+                    }
+                ]
+            },
+            {
+                "section_name": "2.代码要达到的目标",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "明确性：清晰、简洁、自描述"
+                    },
+                    {
+                        "key": "",
+                        "description": "一致性：在程序中使用一种编程规范"
+                    }
+                ]
+            },
+            {
+                "section_name": "3.格式和风格",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "制表符：统一为4个空格"
+                    },
+                    {
+                        "key": "",
+                        "description": "限制一行代码的最大长度"
+                    },
+                    {
+                        "key": "",
+                        "description": "用空行分隔语句块：方法间用1个空行，方法和变量声明之间用2个空行"
+                    },
+                    {
+                        "key": "",
+                        "description": "不要省略大括号，它定义语句块"
+                    },
+                    {
+                        "key": "",
+                        "description": "使用“#region ... #endregion”对长代码进行说明，增强可读性"
+                    }
+                ]
+            },
+            {
+                "section_name": "4.库的使用",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "移除不必要的库"
+                    }
+                ]
+            },
+            {
+                "section_name": "5.全局变量的使用",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "访问：作为普通参数传入函数"
+                    },
+                    {
+                        "key": "",
+                        "description": "修改：作为ref参数传入函数"
+                    }
+                ]
+            },
+            {
+                "section_name": "6.变量声明和初始化",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "仅在使用前声明 || 集中在作用域顶端声明"
+                    },
+                    {
+                        "key": "",
+                        "description": "声明时必须初始化"
+                    }
+                ]
+            },
+            {
+                "section_name": "7.函数的声明和调用",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "声明：根据使用习惯设置参数顺序，多个重载函数保持参数顺序一致 || 集中在作用域顶端声明"
+                    },
+                    {
+                        "key": "",
+                        "description": "调用：调用语句占一行 || 每个参数一行"
+                    }
+                ]
+            },
+            {
+                "section_name": "8.代码语句",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "一行一句，方便调试 || 集中在作用域顶端声明"
+                    }
+                ]
+            },
+            {
+                "section_name": "9.枚举",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "本质：常量集合 + 结构体"
+                    },
+                    {
+                        "key": "",
+                        "description": "使用场合：固定的集合 && 经常区分各个元素"
+                    },
+                    {
+                        "key": "",
+                        "description": "不宜使用：不固定的集合 || 不关注元素间的不同"
+                    }
+                ]
+            },
+            {
+                "section_name": "10.注释",
+                "blocks": [
+                    {
+                        "key": "",
+                        "description": "“//”： 内联代码注释"
+                    },
+                    {
+                        "key": "",
+                        "description": "“///”： 函数注释和类注释"
+                    },
+                    {
+                        "key": "",
+                        "description": "“// TODO”： 待办事项"
+                    }
+                ]
+            }
+        ]
+    },
+    "alert": {
+        "title": "作者箴言",
+        "pargraphs": [
+            {
+                "description": "异想天开的人总是做同一件事，却期待不同的结果"
+            },
+            {
+                "description": "项目管理的核心是思考方式，它适合于任何项目"
+            }
+        ]
+    }
+}

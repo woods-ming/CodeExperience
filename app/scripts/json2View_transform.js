@@ -2,26 +2,24 @@
 
     /* json2View PLUGIN DEFINITION
     * ============================= */
-    var transform_content = {
-        tag: "ul", children: [
-            {
-                tag: "li", children: [
-                    {
-                        tag: "dl", children: function (section, index) {
-                            return json2html.transform(section, { tag: "dt", html: "${section_name}" })
-                                + json2html.transform(section.blocks,
-                                {
-                                    tag: "dd", children: [
-                                        { tag: "label", class: "label label-primary", html: "${key}" },
-                                        { tag: "span", html: " ${description}" }
-                                    ]
-                                });
-                        }
+    var transform_blackBoard_sections = [
+        {
+            tag: "li", children: [
+                {
+                    tag: "dl", children: function (section, index) {
+                        return json2html.transform(section, { tag: "dt", html: "${section_name}" })
+                            + json2html.transform(section.blocks,
+                            {
+                                tag: "dd", children: [
+                                    { tag: "label", class: "label label-primary", html: "${key}" },
+                                    { tag: "span", html: " ${description}" }
+                                ]
+                            });
                     }
-                ]
-            }
-        ]
-    };
+                }
+            ]
+        }
+    ];
 
     var transform_blackBoard = {
         tag: "div", "class": "blackBoard",
@@ -32,12 +30,16 @@
 
              {
                  tag: "ul", children: function () {
+                    if( !this.chapters ){
+                        return json2html.transform(this.sections, transform_blackBoard_sections);
+                    }
+
                     return json2html.transform(this.chapters,
                         {
                             tag: "li", children: function (chapter, index) {
                                 return json2html.transform(chapter, { tag: "label", html: "${chapter_name}" })
-                                    + json2html.transform(chapter.sections,
-                                    transform_content);
+                                    + json2html.transform(chapter.sections, 
+                                        { tag: "ul", children: transform_blackBoard_sections});
                             }
                         });
                  }
@@ -53,9 +55,8 @@
     };
 
     $.json2View_transform = {
-        blackBoard: transform_blackBoard
-
-      , alert: transform_alert
+        blackBoard: transform_blackBoard,
+        alert: transform_alert
     };
 
 }( window.jQuery );

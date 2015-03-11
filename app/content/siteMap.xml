@@ -165,7 +165,7 @@
     </nav>
     <nav text="《拓展书目》">
         <category text="语言层面">
-            <item name="#generalProgramingSpecification" url="content/Expand/cSharpGeneralStandard.html" keywords="通用编程规范">《通用编程规范》</item>
+            <item name="#GeneralProgramingSpecification" url="content/book/GeneralProgramingSpecification.json" keywords="通用编程规范">《通用编程规范》</item>
             <item name="#dotNetProgramingSpecification" url="content/Expand/cSharpDotNetStandard.html" keywords=".Net编程规范">《.Net编程规范》</item>
             <item name="#effectiveCSharp" url="content/Expand/cSharpEffectiveStandard.html" keywords="c#高效编程,Effective C#">《Effective C#》</item>
             <item name="#thinkInOOD" url="content/Expand/thinkInOOD.html" keywords="OOD启思录">《OOD启思录》</item>
