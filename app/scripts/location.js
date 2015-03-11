@@ -15,36 +15,6 @@
         this.onContentLoading = options.onContentLoading;
         this.onContentUpdate = options.onContentUpdate;
 
-        this.transform = {
-            blackBoard: {
-                tag: "div", "class": "blackBoard",
-                children: [
-                    {
-                        tag: "h3", html: "${title} <small>${sub_title}</small>"
-                    },
-
-                    {
-                        tag: "ul",
-                        children: function (obj, index) {
-                            return json2html.transform(obj.chapters, {
-                                tag: "li",
-                                children: [
-                                    { tag: "label", html: "${caption}" },
-                                    { tag: "p", html: "${content}" }
-                                ]
-                            })
-                        }
-                    }
-                ]
-            },
-
-            alert: {
-                tag: "div", "class": "alert", html: "<h4>${title}</h4>",
-                children: function () {
-                    return json2html.transform(this.pargraphs, { tag: "p", html: "${description}" });
-                }
-            }
-        };
     };
 
     Location.prototype = {
@@ -158,8 +128,8 @@
                 dataType : fileType,
                 success : function (data, textStatus, jqXHR) {
                     if(fileType == 'json') {
-                        var blackBoardHtml=json2html.transform(data.blackBoard, that.transform.blackBoard),
-                            alertHtml=json2html.transform(data.alert, that.transform.alert);
+                        var blackBoardHtml = json2html.transform(data.blackBoard, $.json2View_transform.blackBoard)
+                          , alertHtml = json2html.transform(data.alert, $.json2View_transform.alert);
 
                         that.$Content.html(blackBoardHtml + alertHtml);
                     } else {

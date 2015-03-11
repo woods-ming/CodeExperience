@@ -5,10 +5,10 @@
         "chapters":[
             {
                 "chapter_name":"一、项目管理总论",
-                "chapter_content":[
+                "sections":[
                     {
-                        "section_name":"概述",
-                        "section_sentences":[
+                        "section_name":"1.概述",
+                        "blocks":[
                             {
                                 "key":"什么是项目？",
                                 "description":"就是定好时间，解决问题！（多任务复合体）"
