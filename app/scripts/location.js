@@ -165,7 +165,7 @@
 			this.loadSummary($Nav);
             this.loadNav();
             this.loadSubMenu(navText);
-            this.loadBreadcrumb($Item);
+            // this.loadBreadcrumb($Item);
             this.loadContent($Item);
 
             var $NavLink = this.$NavMenu.find('li:contains("' + $Nav.attr('text') + '")'),

@@ -30,6 +30,39 @@
                                 "description": "Keep It Simple Stupid 只做必要的事情"
                             }
                         ]
+                    },
+                    {
+                        "section_name": "2.项目约束四要素： C = f ( P, T, S )",
+                        "blocks": [
+                            {
+                                "key": "P 性能",
+                                "description": "功能（期望的行为）、质量（功能的保持性）"
+                            },
+                            {
+                                "key": "S 规模",
+                                "description": "问题的边界"
+                            },
+                            {
+                                "key": "T 时间",
+                                "description": "投入的 ‘人*月’ （!= 时间表）"
+                            },
+                            {
+                                "key": "C 成本",
+                                "description": "人，物 => 折算成钱"
+                            },
+                            {
+                                "key": "",
+                                "description": "项目的本质是“资源换产品”"
+                            },
+                            {
+                                "key": "性能和规模",
+                                "description": "是对产品的要求（决定了有效的工作量）"
+                            },
+                            {
+                                "key": "时间和成本",
+                                "description": "是投入的资源（人力和物力的整合）"
+                            }
+                        ]
                     }
                 ]
             }

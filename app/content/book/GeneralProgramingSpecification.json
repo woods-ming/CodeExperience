@@ -7,12 +7,12 @@
                 "section_name": "1.编程规范的目的",
                 "blocks": [
                     {
-                        "key": "",
-                        "description": "（必须）减少bug"
+                        "key": "必须",
+                        "description": "减少bug"
                     },
                     {
-                        "key": "",
-                        "description": "（应该）统一编程风格"
+                        "key": "应该",
+                        "description": "统一编程风格"
                     }
                 ]
             },

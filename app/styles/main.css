@@ -28,6 +28,11 @@
     margin: 0;
 }
 
+/* 分享组件 */
+.bdsharebuttonbox{
+    margin-bottom: 1em;
+}
+
 /* 代码美化组件 */
 pre.prettyprint {
     overflow: auto;
