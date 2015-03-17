@@ -110,7 +110,7 @@
                     },
                     {
                         "key": "块注释",
-                        "description": "“///”"
+                        "description": "“/* */”"
                     },
                     {
                         "key": "待办事项",
