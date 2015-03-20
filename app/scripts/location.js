@@ -81,6 +81,25 @@
                 that.$NavMenu.append($NavLink);
             });
         },
+        // loadSubMenu : function (navText) {
+        //     var that = this;
+
+        //     that.$SubMenu.empty();
+        //     this.get$Nav(navText).find('category[text]').each(function () {
+        //         var $Category = $(this),
+        //         $CategoryLink = that.createCategoryLink($Category),
+        //         $CategoryChild = $('<ul class="nav"></ul>');
+
+        //         $Category.find('item[name]').each(function () {
+        //             var $Item = $(this),
+        //             $ItemLink = that.createItemLink($Item);
+
+        //             $CategoryChild.append($ItemLink);
+        //         });
+
+        //         that.$SubMenu.append($CategoryLink.append($CategoryChild));
+        //     });
+        // },
         loadSubMenu : function (navText) {
             var that = this;
 
