@@ -7,7 +7,7 @@
             tag: "li", children: [
                 {
                     tag: "dl", children: function (section, index) {
-                        return json2html.transform(section, { tag: "dt", html: "${section_name}" })
+                        return json2html.transform(section, { tag: "dt", id: "${section_name}", html: "${section_name}" })
                             + json2html.transform(section.blocks,
                             {
                                 tag: "dd", children: [
@@ -47,6 +47,27 @@
         ]
     };
 
+    var transform_catalog_sections = { 
+        tag:"li", 
+        children:[{ 
+            tag: "a", href:"#${section_name}", html:"${section_name}" 
+        }]
+    };
+
+    var transform_catalog = {
+        tag:"li",
+        children:[
+            { 
+                tag: "a", html: "${chapter_name}" 
+            },
+            { 
+                tag: "ul", "class": "nav", children: function (chapter, index) {
+                    return json2html.transform(chapter.sections, transform_catalog_sections);
+                } 
+            }
+        ]
+    };
+
     var transform_alert = {
         tag: "div", "class": "alert", html: "<h4>${title}</h4>",
         children: function () {
@@ -56,6 +77,8 @@
 
     $.json2View_transform = {
         blackBoard: transform_blackBoard,
+        catalog: transform_catalog,
+        catalog_sections: transform_catalog_sections,
         alert: transform_alert
     };
 

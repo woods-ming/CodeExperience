@@ -77,8 +77,23 @@
             this.$Location.find('nav[text]:has(item[name])').each(function () {
                 var $Nav = $(this),
                 $NavLink = that.createNavLink($Nav);
+                $NavChild = $('<ul class="dropdown-menu"></ul>');
 
-                that.$NavMenu.append($NavLink);
+                $Nav.find('category[text]').each(function () {
+                    var $Category = $(this),
+                    $CategoryText = that.createCategoryText($Category);
+
+                    $NavChild.append($CategoryText);
+
+                    $Category.find('item[name]').each(function () {
+                        var $Item = $(this),
+                        $ItemLink = that.createItemLink($Item);
+
+                        $NavChild.append($ItemLink);
+                    });
+                });
+
+                that.$NavMenu.append($NavLink.append($NavChild));
             });
         },
         // loadSubMenu : function (navText) {
@@ -100,36 +115,17 @@
         //         that.$SubMenu.append($CategoryLink.append($CategoryChild));
         //     });
         // },
-        loadSubMenu : function (navText) {
-            var that = this;
+        // loadBreadcrumb : function ($Item) {
+        //     var $Category = $Item.parent().first(),
+        //     $Nav = $Category.parent().first();
 
-            that.$SubMenu.empty();
-            this.get$Nav(navText).find('category[text]').each(function () {
-                var $Category = $(this),
-                $CategoryLink = that.createCategoryLink($Category),
-                $CategoryChild = $('<ul class="nav"></ul>');
+        //     var $ItemText = $('<li class="active">' + $Item.text() + '</li>'),
+        //     $CategoryLink = this.createCategoryLink($Category),
+        //     $NavLink = this.createNavLink($Nav)
 
-                $Category.find('item[name]').each(function () {
-                    var $Item = $(this),
-                    $ItemLink = that.createItemLink($Item);
-
-                    $CategoryChild.append($ItemLink);
-                });
-
-                that.$SubMenu.append($CategoryLink.append($CategoryChild));
-            });
-        },
-        loadBreadcrumb : function ($Item) {
-            var $Category = $Item.parent().first(),
-            $Nav = $Category.parent().first();
-
-            var $ItemText = $('<li class="active">' + $Item.text() + '</li>'),
-            $CategoryLink = this.createCategoryLink($Category),
-            $NavLink = this.createNavLink($Nav)
-
-                this.$Breadcrumb.empty();
-            this.$Breadcrumb.append($NavLink).append($CategoryLink).append($ItemText);
-        },
+        //         this.$Breadcrumb.empty();
+        //     this.$Breadcrumb.append($NavLink).append($CategoryLink).append($ItemText);
+        // },
         loadContent : function ($Item) {
             var url = $Item.attr('url'),
             fileType = url.split('.')[1],
@@ -148,11 +144,20 @@
                 success : function (data, textStatus, jqXHR) {
                     if(fileType == 'json') {
                         var blackBoardHtml = json2html.transform(data.blackBoard, $.json2View_transform.blackBoard)
-                          , alertHtml = json2html.transform(data.alert, $.json2View_transform.alert);
+                          , alertHtml = json2html.transform(data.alert, $.json2View_transform.alert)
+                          , catalogHtml;
+
+                        if(data.blackBoard.chapters) {
+                            catalogHtml=json2html.transform(data.blackBoard.chapters, $.json2View_transform.catalog);
+                        } else {
+                            catalogHtml=json2html.transform(data.blackBoard.sections, $.json2View_transform.catalog_sections);
+                        }
 
                         that.$Content.html(blackBoardHtml + alertHtml);
+                        that.$SubMenu.html(catalogHtml);
                     } else {
                         that.$Content.html(data);
+                        that.$SubMenu.empty();
                     }
  
                     that.onContentUpdate();
@@ -183,7 +188,7 @@
             this.loadKeywords($Item);
 			this.loadSummary($Nav);
             this.loadNav();
-            this.loadSubMenu(navText);
+            // this.loadSubMenu(navText);
             // this.loadBreadcrumb($Item);
             this.loadContent($Item);
 
@@ -194,19 +199,10 @@
             this.activeLink($NavLink);
             this.activeLink($ItemLink);
         },
-        createLinkHtml : function (anchor, text) {
-            return '<li><a data-target="location" href="' + (anchor || '#') + '">' + text + '</a></li>';
-        },
-        createLink : function (anchor, text) {
-            var that = this;
-
-            return $(this.createLinkHtml(anchor, text));
-        },
         createNavLink : function ($Nav) {
-            var anchor = $Nav.find('item[name]').first().attr('name'),
-            navText = $Nav.attr('text');
+            var navText = $Nav.attr('text');
 
-            return this.createLink(anchor, navText)
+            return $('<li class="dropdown"><a data-toggle="dropdown" href="#">' + navText + '<span class="caret"></span></a></li>');
         },
         createCategoryLink : function ($Category) {
             var anchor = $Category.find('item[name]').first().attr('name'),
@@ -217,13 +213,21 @@
         createCategoryText : function ($Category) {
             var categoryText = $Category.attr('text');
 
-            return $('<li class="nav-header">' + categoryText + '</li>');
+            return $('<li class="dropdown-header">' + categoryText + '</li>');
         },
-        createItemLink : function ($Item) {
+        createItemLink : function ($Item) {//
             var anchor = $Item.attr('name'),
             itemText = $Item.text();
 
             return this.createLink(anchor, itemText);
+        },
+        createLink : function (anchor, text) {
+            var that = this;
+
+            return $(this.createLinkHtml(anchor, text));
+        },
+        createLinkHtml : function (anchor, text) {
+            return '<li><a data-target="location" href="' + (anchor || '#') + '">' + text + '</a></li>';
         },
         activeLink : function ($Link) {
             $Link.addClass('active').siblings().removeClass('active');

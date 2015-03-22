@@ -4,6 +4,7 @@
   "dependencies": {
     "bootstrap": ">=3.3.2",
     "json2html": "moappi/json2html",
+    "jquery.json2html": "moappi/jquery.json2html",
     "google-code-prettify": ">=1.0.4"
   }
 }
