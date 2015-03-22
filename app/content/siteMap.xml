@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <location>
-    <nav text="《拓展书目》">
+    <nav text="《读而后思》">
         <category text="语言层面">
             <item name="#GeneralProgramingSpecification" url="content/book/GeneralProgramingSpecification.json" keywords="通用编程规范">《通用编程规范》</item>
         </category>
